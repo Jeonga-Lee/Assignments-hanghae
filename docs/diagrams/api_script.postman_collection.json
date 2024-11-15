@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "3acb1131-548b-4b57-9b0a-7907237975db",
+		"name": "게시판",
+		"description": "회원가입/로그인 기능\n\n게시판 CRUD 기능",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39757220"
+	},
+	"item": [
+		{
+			"name": "회원가입",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"bin1234\",\n    \"password\": \"Bin@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"signup"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "회원가입",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"bin1234\",\n    \"password\": \"Bin@12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"회원가입 성공\",\n    \"statusCode\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "로그인",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"bin1234\",\n    \"password\": \"Bin@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "로그인",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"bin1234\",\n    \"password\": \"Bin@12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"로그인 성공\",\n    \"statusCode\": 200\n}\n"
+				}
+			]
+		},
+		{
+			"name": "게시글 작성",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"게시글5\",\n    \"content\": \"내용5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "게시글 작성",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"게시글5\",\n    \"content\": \"내용5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"title\": \"게시글5\",\n    \"content\": \"내용5\",\n    \"username\": \"bin1234\",\n    \"createdAt\": \"2022-12-01T12:56:36.821474\",\n    \"modifiedAt\": \"2022-12-01T12:56:36.821474\"\n}"
+				}
+			]
+		},
+		{
+			"name": "게시글 목록 조회",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "게시글 목록 조회",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"postList\": [\n        {\n            \"id\": 1,\n            \"title\": \"게시글1\",\n            \"content\": \"내용1\",\n            \"username\": \"bin1234\",\n            \"createdAt\": \"2022-12-01T12:52:06.729608\",\n            \"modifiedAt\": \"2022-12-01T12:52:06.729608\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"게시글2\",\n            \"content\": \"내용2\",\n            \"username\": \"bin1234\",\n            \"createdAt\": \"2022-12-01T12:52:10.566505\",\n            \"modifiedAt\": \"2022-12-01T12:52:10.566505\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"게시글3\",\n            \"content\": \"내용3\",\n            \"username\": \"bin1234\",\n            \"createdAt\": \"2022-12-01T12:52:16.773748\",\n            \"modifiedAt\": \"2022-12-01T12:52:16.773748\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"게시글4 삭제 내용5 수정\",\n            \"content\": \"내용4 삭제 내용5 수정\",\n            \"username\": \"bin1234\",\n            \"createdAt\": \"2022-12-01T12:56:36.821474\",\n            \"modifiedAt\": \"2022-12-01T12:59:25.681261\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "\b게시글 수정",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"게시글4 삭제 내용5 수정\",\n    \"content\": \"내용4 삭제 내용5 수정\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/post/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"{id}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "\b게시글 수정",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"게시글4 삭제 내용5 수정\",\n    \"content\": \"내용4 삭제 내용5 수정\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/post/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post",
+								"{id}"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"title\": \"게시글4 삭제 내용5 수정\",\n    \"content\": \"내용4 삭제 내용5 수정\",\n    \"username\": \"bin1234\",\n    \"createdAt\": \"2022-12-01T12:56:36.821474\",\n    \"modifiedAt\": \"2022-12-01T12:56:36.821474\"\n}"
+				}
+			]
+		},
+		{
+			"name": "게시글 삭제",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/post/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"{id}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "게시글 삭제",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/post/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post",
+								"{id}"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"게시글 삭제 성공\",\n    \"statusCode\": 200\n}"
+				}
+			]
+		}
+	]
+}

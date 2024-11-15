@@ -1,0 +1,26 @@
+@startuml
+'left to right direction
+actor "사용자" as User
+
+usecase "로그인" as Login
+usecase "로그인 실패" as FailLogin
+usecase "회원 가입" as Join
+usecase "게시글 목록 조회" as ViewPosts
+usecase "게시글 목록 정렬" as SortPostsByDate
+usecase "게시글 조회" as ViewPost
+usecase "게시글 작성" as CreatePost
+usecase "게시글 수정 및 삭제" as EditOrDeletePost
+usecase "비밀번호 인증" as AuthenticateByPassword
+
+User --> ViewPost
+User --> ViewPosts
+User --> Join
+User --> Login
+
+FailLogin ...> Login : <<extend>>
+SortPostsByDate ...> ViewPosts : <<extend>>
+CreatePost ...> ViewPost : <<extend>>
+EditOrDeletePost ...> ViewPost : <<extend>>
+EditOrDeletePost ...> AuthenticateByPassword : <<include>>
+
+@enduml

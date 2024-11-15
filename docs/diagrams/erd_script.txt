@@ -1,0 +1,18 @@
+User
+-
+id PK int
+name varchar(10)
+password varchar(15)
+created_at timestamp
+
+Order
+-
+id PK int
+title varchar
+content text
+user_id int FK >- User.id
+user_name varchar(10_
+password varchar(15)
+status varchar
+created_at timestamp
+modified_at timestamp
